@@ -415,6 +415,7 @@ static NSString* MIME_JPEG    = @"image/jpeg";
         case EncodingTypePNG:
             data = UIImagePNGRepresentation(image);
             if (outMime != nil) *outMime = MIME_PNG;
+            self.data = data;
             break;
         case EncodingTypeJPEG:
         {
@@ -477,7 +478,7 @@ static NSString* MIME_JPEG    = @"image/jpeg";
             break;
     };
     
-    
+
     return data;
 }
 
@@ -626,6 +627,7 @@ static NSString* MIME_JPEG    = @"image/jpeg";
 
                         CFRelease(sourceImage);
                         CFRelease(destinationImage);
+                        self.metadata = nil;
                     } else {
                         imageDataWithExif = [self.data mutableCopy];
                     }
@@ -855,6 +857,7 @@ static NSString* MIME_JPEG    = @"image/jpeg";
         dataCopy = nil;
         CFRelease(sourceImage);
         CFRelease(destinationImage);
+        self.metadata = nil;
     } else {
         imageDataWithExif = [self.data mutableCopy];
     }
