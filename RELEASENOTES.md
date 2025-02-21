@@ -20,6 +20,12 @@
 -->
 # Release Notes
 
+### 8.0.1-dev (Feb 21, 2025)
+
+**Fixes:**
+
+* [Commit](https://github.com/apache/cordova-plugin-camera/commit/d7ce499a8adb4fb25c83b5d65c80e37c83915722) fix(ios): png & rotation bug fixed
+
 ### 8.0.0 (Oct 30, 2024)
 
 **Breaking Changes:**
